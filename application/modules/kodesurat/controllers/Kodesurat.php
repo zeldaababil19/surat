@@ -29,7 +29,7 @@ class Kodesurat extends MY_Controller
     $this->form_validation->set_rules('kode_surat', 'Kode Surat', 'required');
 
     if ($this->form_validation->run() == true) {
-      $data['nama'] = $this->input->post('nama_kodesurat');
+      $data['nama_kodesurat'] = $this->input->post('nama_kodesurat');
       $data['kode_surat'] = $this->input->post('kode_surat');
       $this->Kodesurat_model->save($data);
       $this->session->set_flashdata('message', 'Data berhasil ditambahkan');
@@ -58,7 +58,7 @@ class Kodesurat extends MY_Controller
 
     if ($this->form_validation->run() == true) {
       $idmst_kodesurat = $this->input->post('idmst_kodesurat');
-      $data['nama'] = $this->input->post('nama_kodesurat');
+      $data['nama_kodesurat'] = $this->input->post('nama_kodesurat');
       $data['kode_surat'] = $this->input->post('kode_surat');
       $this->Kodesurat_model->update($data, $idmst_kodesurat);
       $this->session->set_flashdata('message', 'Data berhasil diubah');

@@ -49,7 +49,7 @@
                   <input type="hidden" name="idmst_pr" id="idmst_pr" value="<?php echo $prtype->idmst_pr ?>">
                   <div class="form-group">
                     <label for="nama_prtype">Nama PR Type</label>
-                    <input type="text" value="<?php echo $prtype->nama ?>" class="form-control" id="nama_prtype" name="nama_prtype" placeholder="Enter PR Type" required>
+                    <input type="text" value="<?php echo $prtype->nama_pr ?>" class="form-control" id="nama_prtype" name="nama_prtype" placeholder="Enter PR Type" required>
                   </div>
                   <div class="form-group">
                     <label for="color">Color</label>

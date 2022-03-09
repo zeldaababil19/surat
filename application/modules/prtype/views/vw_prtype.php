@@ -47,8 +47,8 @@
                     foreach ($prtype as $row) {
                     ?>
                       <tr>
-                        <td widtd="5%"><?php echo $no++; ?></td>
-                        <td><?php echo $row->nama; ?></td>
+                        <td width="5%"><?php echo $no++; ?></td>
+                        <td><?php echo $row->nama_pr; ?></td>
                         <td><?php echo $row->color; ?>
                           <div style="border: 0; padding: 10px; background-color: <?php echo $row->color; ?>; text-align: left;"></div>
                         </td>

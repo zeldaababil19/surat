@@ -49,7 +49,7 @@
                     foreach ($project as $row) {
                     ?>
                       <tr>
-                        <td widtd="5%"><?php echo $no++; ?></td>
+                        <td width="5%"><?php echo $no++; ?></td>
                         <td><?php echo $row->tahun; ?>/<?php echo $row->inisial_pt; ?>/<?php echo $row->no_urut_projek ?></td>
                         <td><?php echo $row->nama_projek; ?></td>
                         <td><?php echo $row->inisial_instansi; ?></td>

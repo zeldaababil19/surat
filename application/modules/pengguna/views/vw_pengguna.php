@@ -44,9 +44,9 @@
                 foreach ($pengguna as $row) {
                 ?>
                   <tr>
-                    <td widtd="5%"><?php echo $no++; ?></td>
+                    <td width="5%"><?php echo $no++; ?></td>
                     <td><?php echo $row->username; ?></td>
-                    <td><?php echo $row->nama; ?></td>
+                    <td><?php echo $row->nama_pengguna; ?></td>
                     <td><?php echo $row->role; ?></td>
                     <td>
                       <a href="<?php echo base_url(); ?>pengguna/detail/<?php echo $row->id; ?>" class="btn btn-info">Detail</a>

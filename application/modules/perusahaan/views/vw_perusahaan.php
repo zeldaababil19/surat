@@ -47,7 +47,7 @@
                     foreach ($pt as $row) {
                     ?>
                       <tr>
-                        <td widtd="5%"><?php echo $no++; ?></td>
+                        <td width="5%"><?php echo $no++; ?></td>
                         <td><?php echo $row->nama_pt; ?></td>
                         <td><?php echo $row->inisial_pt; ?></td>
                         <td>

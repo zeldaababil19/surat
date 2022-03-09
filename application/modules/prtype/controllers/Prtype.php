@@ -30,7 +30,7 @@ class Prtype extends MY_Controller
     $this->form_validation->set_rules('color', 'Color', 'required');
 
     if ($this->form_validation->run() == true) {
-      $data['nama'] = $this->input->post('nama_prtype');
+      $data['nama_pr'] = $this->input->post('nama_prtype');
       $data['color'] = $this->input->post('color');
       $this->Prtype_model->save($data);
       $this->session->set_flashdata('message', 'Data Berhasil ditambahkan');
@@ -53,7 +53,7 @@ class Prtype extends MY_Controller
 
     if ($this->form_validation->run() == true) {
       $idmst_pr = $this->input->post('idmst_pr');
-      $data['nama'] = $this->input->post('nama_prtype');
+      $data['nama_pr'] = $this->input->post('nama_prtype');
       $data['color'] = $this->input->post('color');
       $this->Prtype_model->update($data, $idmst_pr);
       $this->session->set_flashdata('message', 'Data berhasil diubah');

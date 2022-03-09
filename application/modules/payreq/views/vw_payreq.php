@@ -39,34 +39,37 @@
                   <thead>
                     <tr>
                       <th width="5%">No</th>
-                      <th>Browser</th>
-                      <th>Platform(s)</th>
-                      <th>Engine version</th>
-                      <th>CSS grade</th>
+                      <th>Nomor Surat</th>
+                      <th>Requestor Name</th>
+                      <th>PR Type</th>
+                      <th>Receiver Name</th>
+                      <th>Due Date</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php
                     $no = 1;
+                    foreach ($payreq as $row) {
                     ?>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
-                      </td>
-                      <td>Win 95+</td>
-                      <td> 4</td>
-                      <td>X</td>
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.0
-                      </td>
-                      <td>Win 95+</td>
-                      <td>5</td>
-                      <td>C</td>
-                    </tr>
+                      <tr style="background-color: <?php echo $row->color ?>;">
+                        <td width="5%"><?php echo $no++; ?></td>
+                        <td><?php echo $row->no_urut_projek; ?>/<?php echo $row->nomor_surat; ?>/<?php echo $row->inisial_pt; ?>/<?php echo $row->kode_surat ?>/<?php echo $row->inisial_instansi ?>/<?php echo $row->bulan_romawi ?>/<?php echo $row->tahun ?></td>
+                        <td><?php echo $row->requestor_name; ?></td>
+                        <td><?php echo $row->nama_pr ?></td>
+                        <td><?php echo $row->receiver_name ?></td>
+                        <td><?php echo $row->due_date ?></td>
+                        <td>
+                          <a href="<?php echo base_url(); ?>datapr/create/<?php echo $row->idpayreq; ?>" class="btn btn-success">Tambah Data PR</a>
+                          <a href="<?php echo base_url(); ?>datapr/cetak/<?php echo $row->idpayreq; ?>" class="btn btn-primary">Cetak</a>
+                          <a href="<?php echo base_url(); ?>payreq/detail/<?php echo $row->idpayreq; ?>" class="btn btn-info">Detail</a>
+                          <a href="<?php echo base_url(); ?>payreq/edit/<?php echo $row->idpayreq; ?>" class="btn btn-warning">Edit</a>
+                          <a data-delete-url="<?php echo base_url(); ?>payreq/delete/<?php echo $row->idpayreq; ?>" class="btn btn-danger" onclick="deleteConfirm(this)">Hapus</a>
+                        </td>
+                      </tr>
+                    <?php
+                    }
+                    ?>
                   </tbody>
                 </table>
               </div>

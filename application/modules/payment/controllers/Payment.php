@@ -29,7 +29,7 @@ class Payment extends MY_Controller
     $this->form_validation->set_rules('nama_payment', 'Nama Payment', 'required');
 
     if ($this->form_validation->run() == true) {
-      $data['nama'] = $this->input->post('nama_payment');
+      $data['nama_payment'] = $this->input->post('nama_payment');
       $this->Payment_model->save($data);
       $this->session->set_flashdata('message', 'Data Berhasil ditambahkan');
       redirect('payment');
@@ -50,7 +50,7 @@ class Payment extends MY_Controller
 
     if ($this->form_validation->run() == true) {
       $idmst_payment = $this->input->post('idmst_payment');
-      $data['nama'] = $this->input->post('nama_payment');
+      $data['nama_payment'] = $this->input->post('nama_payment');
       $this->Payment_model->update($data, $idmst_payment);
       $this->session->set_flashdata('message', 'Data berhasil diubah');
       redirect('payment');

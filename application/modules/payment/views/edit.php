@@ -49,7 +49,7 @@
                   <input type="hidden" name="idmst_payment" id="idmst_payment" value="<?php echo $payment->idmst_payment ?>">
                   <div class="form-group">
                     <label for="nama_payment">Nama Payment</label>
-                    <input type="text" value="<?php echo $payment->nama ?>" class="form-control" id="nama_payment" name="nama_payment" placeholder="Enter Payment" required>
+                    <input type="text" value="<?php echo $payment->nama_payment ?>" class="form-control" id="nama_payment" name="nama_payment" placeholder="Enter Payment" required>
                   </div>
 
                 </div>

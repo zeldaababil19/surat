@@ -64,7 +64,7 @@
                   </div>
                   <div class="form-group">
                     <label for="jenis_surat">Jenis Surat Keluar</label>
-                    <input type="text" disabled value="<?php echo $suratkeluar->nama ?>" class="form-control" id="jenis_surat" name="jenis_surat" placeholder="Enter Jenis Surat" required>
+                    <input type="text" disabled value="<?php echo $suratkeluar->nama_kodesurat ?>" class="form-control" id="jenis_surat" name="jenis_surat" placeholder="Enter Jenis Surat" required>
                   </div>
                   <div class="form-group">
                     <label for="instansi">Instansi</label>

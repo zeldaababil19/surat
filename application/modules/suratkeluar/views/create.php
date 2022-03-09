@@ -75,7 +75,7 @@
                     <select name="jenis_surat" id="jenis_surat" class="form-control">
                       <option selected disabled>---Pilih Perusahaan---</option>
                       <?php foreach ($jenissurat as $row) { ?>
-                        <option value=" <?php echo $row->idmst_kodesurat; ?> "><?php echo $row->nama; ?></option>
+                        <option value=" <?php echo $row->idmst_kodesurat; ?> "><?php echo $row->nama_kodesurat; ?></option>
                       <?php } ?>
                     </select>
                   </div>

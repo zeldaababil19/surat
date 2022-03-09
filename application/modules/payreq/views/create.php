@@ -64,7 +64,7 @@
 
                   <div class="bs-stepper-content">
                     <!-- your steps content here -->
-                    <form method="post" action="<?php echo base_url(); ?>payreq/save">
+                    <form method="post" action="<?php echo base_url(); ?>payreq/save" enctype='multipart/form-data'>
                       <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
                         <!-- ini page 1 -->
                         <div class="form-group">
@@ -91,7 +91,7 @@
                           <select name="pr_type" id="pr_type" class="form-control">
                             <option selected disabled>---Pilih PR Type---</option>
                             <?php foreach ($prtype as $row) { ?>
-                              <option value="<?php echo $row->idmst_pr; ?> "><?php echo $row->nama; ?></option>
+                              <option value="<?php echo $row->idmst_pr; ?> "><?php echo $row->nama_pr; ?></option>
                             <?php } ?>
                           </select>
                         </div>
@@ -110,7 +110,7 @@
                             <?php
                             foreach ($payment as $row) {
                             ?>
-                              <option value="<?php echo $row->idmst_payment; ?>"><?php echo $row->nama; ?></option>
+                              <option value="<?php echo $row->idmst_payment; ?>"><?php echo $row->nama_payment; ?></option>
                             <?php
                             }
                             ?>
@@ -126,45 +126,44 @@
 
 
                       <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-                        
+                        <!-- ini page 2 -->
                         <div class="container">
                           <div class="form-group">
-                            <form name="add_name" id="add_name">
-                              <div class="table-responsive">
-                                <table class="table table-bordered dynamic_field" id="dynamic_field">
-                                  <tr>
-                                    <td>
+                            <!-- <form name="add_name" id="add_name"> -->
+                            <div class="table-responsive">
+                              <table class="table table-bordered dynamic_field" id="dynamic_field">
+                                <tr>
+                                  <td>
 
-                                      <div class="form-group">
-                                        <label for="invoice_number">Invoice Number</label>
-                                        <input type="text" name="invoice_number[]" id="invoice_number" class="form-control" placeholder="Enter Invoice Number">
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="po">PO Number</label>
-                                        <input type="text" name="po[]" id="po" class="form-control" placeholder="Enter PO Number">
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="deskripsi">Deskripsi</label>
-                                        <textarea name="deskripsi[]" id="deskripsi" cols="30" rows="" class="form-control" placeholder="Enter Deskripsi" required></textarea>
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="quantity">Quantity</label>
-                                        <input type="text" name="quantity[]" id="quantity" class="form-control" placeholder="Enter Quantity" required>
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="amount">Amount</label>
-                                        <input type="number" name="amount[]" id="amount" class="form-control" placeholder="Enter Quantity" required>
-                                      </div>
+                                    <div class="form-group">
+                                      <label for="invoice_number">Invoice Number</label>
+                                      <input type="text" name="invoice_number[]" id="invoice_number" class="form-control" placeholder="Enter Invoice Number">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="po">PO Number</label>
+                                      <input type="text" name="po[]" id="po" class="form-control" placeholder="Enter PO Number">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="deskripsi">Deskripsi</label>
+                                      <textarea name="deskripsi[]" id="deskripsi" cols="30" rows="" class="form-control" placeholder="Enter Deskripsi" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="quantity">Quantity</label>
+                                      <input type="text" name="quantity[]" id="quantity" class="form-control" placeholder="Enter Quantity" required>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="amount">Amount</label>
+                                      <input type="number" name="amount[]" id="amount" class="form-control" placeholder="Enter Quantity" required>
+                                    </div>
 
-                                    </td>
-                                    <td width="5%"><button type="button" name="add" id="add" class="btn btn-success"><i class="fas fa-plus"></i></button></td>
-                                  </tr>
-                                </table>
-                              </div>
-                            </form>
+                                  </td>
+                                  <td width="5%"><button type="button" name="add" id="add" class="btn btn-success"><i class="fas fa-plus"></i></button></td>
+                                </tr>
+                              </table>
+                            </div>
+                            <!-- </form> -->
                           </div>
                         </div>
-
                         <button class="btn btn-secondary" type="button" onclick="stepper.previous()">Previous</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <!-- sampai sini -->

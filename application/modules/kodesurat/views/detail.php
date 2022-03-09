@@ -48,7 +48,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="nama_kodesurat">Nama Kode Surat</label>
-                    <input type="text" disabled value="<?php echo $kodesurat->nama ?>" class="form-control" id="nama_kodesurat" name="nama_kodesurat" placeholder="Enter Kode Surat" required>
+                    <input type="text" disabled value="<?php echo $kodesurat->nama_kodesurat ?>" class="form-control" id="nama_kodesurat" name="nama_kodesurat" placeholder="Enter Kode Surat" required>
                   </div>
                   <div class="form-group">
                     <label for="kodesurat">Kode Surat</label>

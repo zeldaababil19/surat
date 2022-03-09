@@ -46,8 +46,8 @@
                     foreach ($payment as $row) {
                     ?>
                       <tr>
-                        <td widtd="5%"><?php echo $no++; ?></td>
-                        <td><?php echo $row->nama; ?></td>
+                        <td width="5%"><?php echo $no++; ?></td>
+                        <td><?php echo $row->nama_payment; ?></td>
                         <td>
                           <a href="<?php echo base_url(); ?>payment/edit/<?php echo $row->idmst_payment; ?>" class="btn btn-warning">Edit</a>
                           <a data-delete-url="<?php echo base_url(); ?>payment/delete/<?php echo $row->idmst_payment; ?>" class="btn btn-danger" onclick="deleteConfirm(this)">Hapus</a>

@@ -47,7 +47,7 @@
                     foreach ($instansi as $row) {
                     ?>
                       <tr>
-                        <td widtd="5%"><?php echo $no++; ?></td>
+                        <td width="5%"><?php echo $no++; ?></td>
                         <td><?php echo $row->nama_instansi; ?></td>
                         <td><?php echo $row->inisial_instansi; ?></td>
                         <td>

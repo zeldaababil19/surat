@@ -46,8 +46,8 @@
                     foreach ($suratkeluar as $row) {
                     ?>
                       <tr>
-                        <td widtd="5%"><?php echo $no++; ?></td>
-                        <td><?php echo $row->nama ?></td>
+                        <td width="5%"><?php echo $no++; ?></td>
+                        <td><?php echo $row->nama_kodesurat ?></td>
                         <td><?php echo $row->no_urut_projek ?>/<?php echo $row->nomor_surat; ?>/<?php echo $row->inisial_pt; ?>/<?php echo $row->kode_surat ?>/<?php echo $row->inisial_instansi ?>/<?php echo $row->bulan_romawi ?>/<?php echo $row->tahun ?></td>
                         <td><?php echo $row->createAt; ?></td>
                         <td>

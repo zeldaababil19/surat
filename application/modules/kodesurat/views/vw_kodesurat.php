@@ -47,8 +47,8 @@
                     foreach ($kodesurat as $row) {
                     ?>
                       <tr>
-                        <td widtd="5%"><?php echo $no++; ?></td>
-                        <td><?php echo $row->nama; ?></td>
+                        <td width="5%"><?php echo $no++; ?></td>
+                        <td><?php echo $row->nama_kodesurat; ?></td>
                         <td><?php echo $row->kode_surat; ?></td>
                         <td>
                           <a href="<?php echo base_url(); ?>kodesurat/detail/<?php echo $row->idmst_kodesurat; ?>" class="btn btn-info">Detail</a>

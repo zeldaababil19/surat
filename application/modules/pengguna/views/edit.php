@@ -53,7 +53,7 @@
                   </div>
                   <div class="form-group">
                     <label for="nama_pengguna">Nama Pengguna</label>
-                    <input type="text" class="form-control" value="<?php echo $pengguna->nama ?>" id="nama_pengguna" name="nama_pengguna" placeholder="Enter Nama Pengguna" required>
+                    <input type="text" class="form-control" value="<?php echo $pengguna->nama_pengguna ?>" id="nama_pengguna" name="nama_pengguna" placeholder="Enter Nama Pengguna" required>
                   </div>
                   <div class="form-group">
                     <label for="password">Role</label>

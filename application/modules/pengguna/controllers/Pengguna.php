@@ -33,7 +33,7 @@ class Pengguna extends MY_Controller
     if ($this->form_validation->run() == true) {
       $data['username'] = $this->input->post('username');
       $data['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
-      $data['nama'] = $this->input->post('nama_pengguna');
+      $data['nama_pengguna'] = $this->input->post('nama_pengguna');
       $data['role'] = $this->input->post('role');
       $this->Pengguna_model->save($data);
       $this->session->set_flashdata('message', 'Data berhasil ditambahkan');
@@ -65,7 +65,7 @@ class Pengguna extends MY_Controller
     if ($this->form_validation->run() == true) {
       $id = $this->input->post('id');
       $data['username'] = $this->input->post('username');
-      $data['nama'] = $this->input->post('nama_pengguna');
+      $data['nama_pengguna'] = $this->input->post('nama_pengguna');
       // $data['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
       $data['role'] = $this->input->post('role');
       $this->Pengguna_model->update($data, $id);
