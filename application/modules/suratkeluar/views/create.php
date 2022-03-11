@@ -52,7 +52,7 @@
                       <option selected disabled>---Pilih ID Project---</option>
                       <?php
                       foreach ($project as $row) { ?>
-                        <option name="id_project" value="<?php echo $row->id_project; ?>"><?php echo $row->tahun; ?>/<?php echo $row->inisial_pt ?>/<?php echo $row->no_urut_projek ?></option>
+                        <option name="id_project" value="<?php echo $row->id_project; ?>"><?php echo $row->tahun_projek; ?>/<?php echo $row->inisial_pt ?>/<?php echo $row->no_urut_projek ?></option>
                       <?php } ?>
                     </select>
                   </div>

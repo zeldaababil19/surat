@@ -46,6 +46,7 @@
               ?>
               <form method="post" action="<?php echo base_url(); ?>suratkeluar/update">
                 <div class="card-body">
+                  <input type="hidden" name="id_project" id="id_project" value="<?php echo $suratkeluar->idnmr_surat; ?>">
                   <div class="form-group">
                     <label for="nomor_surat">Nomor Surat</label>
                     <input type="text" value="<?php echo $suratkeluar->no_urut_projek ?>/<?php echo $suratkeluar->nomor_surat; ?>/<?php echo $suratkeluar->inisial_pt; ?>/<?php echo $suratkeluar->kode_surat ?>/<?php echo $suratkeluar->inisial_instansi ?>/<?php echo $suratkeluar->bulan_romawi ?>/<?php echo $suratkeluar->tahun ?>" class="form-control" id="nomor_surat" name="nomor_surat" placeholder="Enter nomor Surat" required>
@@ -55,8 +56,8 @@
                     <input type="text" value="<?php echo $suratkeluar->no_urut_projek ?>" class="form-control" id="id_projek" name="id_projek" placeholder="Enter Id Project" required>
                   </div>
                   <div class="form-group">
-                    <label for="no_urut_surat">No Urut Surat Keluar</label>
-                    <input type="text" value="<?php echo $suratkeluar->nomor_surat ?>" class="form-control" id="no_urut_surat" name="no_urut_surat" placeholder="Enter No Urut Surat Keluar" required>
+                    <label for="no_surat">No Surat</label>
+                    <input type="text" value="<?php echo $suratkeluar->nomor_surat ?>" class="form-control" id="no_surat" name="no_surat" placeholder="Enter No Urut Surat Keluar" required>
                   </div>
                   <div class="form-group">
                     <label for="pt">Perusahaan</label>
@@ -83,6 +84,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Update</button>
                   <button type="button" class="btn btn-success" onclick="history.back(-1)" value="Kembali">Kembali</button>
                 </div>
               </form>

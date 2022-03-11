@@ -31,7 +31,7 @@ class Auth extends MY_Controller
         $session = array(
           'authenticated' => true,
           'username' => $user->username,
-          'nama' => $user->nama,
+          'nama' => $user->nama_pengguna,
           'role' => $user->role,
         );
 

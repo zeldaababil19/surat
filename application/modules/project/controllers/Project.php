@@ -49,7 +49,7 @@ class Project extends MY_Controller
       $data['no_urut_projek'] = $this->input->post('no_urut_projek');
       $data['id_pt'] = $this->input->post('pt');
       $data['id_instansi'] = $this->input->post('instansi');
-      $data['tahun'] = $this->input->post('tahun');
+      $data['tahun_projek'] = $this->input->post('tahun');
       $data['keterangan'] = $this->input->post('keterangan');
       $this->Project_model->save($data);
       $this->session->set_flashdata('message', 'Data berhasil ditambahkan');
@@ -90,7 +90,7 @@ class Project extends MY_Controller
       $data['id_pt'] = $this->input->post('pt');
       $data['id_instansi'] = $this->input->post('instansi');
       $data['nama_projek'] = $this->input->post('nama_project');
-      $data['tahun'] = $this->input->post('tahun');
+      $data['tahun_projek'] = $this->input->post('tahun');
       // $data['keterangan'] = $this->input->post('keterangan');
       $this->Project_model->update($data, $idmst_project);
       $this->session->set_flashdata('message', 'Data berhasil diubah');

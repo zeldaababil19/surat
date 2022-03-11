@@ -68,7 +68,7 @@
                   </div>
                   <div class="form-group">
                     <label for="tahun">Tahun</label>
-                    <input type="text" disabled value="<?php echo $project->tahun ?>" class="form-control" id="tahun" name="tahun" placeholder="Enter Tahun" required>
+                    <input type="text" disabled value="<?php echo $project->tahun_projek ?>" class="form-control" id="tahun" name="tahun" placeholder="Enter Tahun" required>
                   </div>
                   <div class="form-group">
                     <label for="keterangan">Keterangan</label>

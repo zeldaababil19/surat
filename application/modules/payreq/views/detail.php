@@ -9,13 +9,13 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Instansi</h1>
+                <h1 class="m-0">Payment Request</h1>
               </div><!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Instansi</li>
-                  <li class="breadcrumb-item active">update</li>
+                  <li class="breadcrumb-item active">Payment Request</li>
+                  <li class="breadcrumb-item active">Detail</li>
 
                 </ol>
               </div><!-- /.col -->
@@ -31,7 +31,7 @@
 
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Ubah Data Instansi</h3>
+                <h3 class="card-title">Detail Data Payment Request</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -44,25 +44,7 @@
               <?php
               }
               ?>
-              <form method="post" action="<?php echo base_url(); ?>instansi/update">
-                <div class="card-body">
-                  <input type="hidden" name="idmst_instansi" id="idmst_instansi" value="<?php echo $instansi->idmst_instansi ?>">
-                  <div class="form-group">
-                    <label for="nama_instansi">Nama Instansi</label>
-                    <input type="text" value="<?php echo $instansi->nama_instansi ?>" class="form-control" id="nama_instansi" name="nama_instansi" placeholder="Enter Instansi" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="inisial_instansi">Inisial Instansi</label>
-                    <input type="text" value="<?php echo $instansi->inisial_instansi ?>" class="form-control" id="inisial_instansi" name="inisial_instansi" placeholder="Enter Inisial Instansi" required>
-                  </div>
-
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
-                </div>
-              </form>
+              
             </div>
 
           </div><!-- /.container-fluid -->

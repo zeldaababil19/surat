@@ -1,4 +1,7 @@
     <?php
+
+    use SebastianBergmann\Environment\Console;
+
     ?>
 
     <!-- Content Wrapper. Contains page content -->
@@ -60,8 +63,8 @@
                         <td><?php echo $row->receiver_name ?></td>
                         <td><?php echo $row->due_date ?></td>
                         <td>
-                          <a href="<?php echo base_url(); ?>datapr/create/<?php echo $row->idpayreq; ?>" class="btn btn-success">Tambah Data PR</a>
-                          <a href="<?php echo base_url(); ?>datapr/cetak/<?php echo $row->idpayreq; ?>" class="btn btn-primary">Cetak</a>
+                          <a href="<?php echo base_url(); ?>payreq/create/<?php echo $row->idpayreq; ?>" class="btn btn-success">Tambah Data PR</a>
+                          <a href="<?php echo base_url(); ?>payreq/export/<?php echo $row->idpayreq; ?>" class="btn btn-primary">Cetak</a>
                           <a href="<?php echo base_url(); ?>payreq/detail/<?php echo $row->idpayreq; ?>" class="btn btn-info">Detail</a>
                           <a href="<?php echo base_url(); ?>payreq/edit/<?php echo $row->idpayreq; ?>" class="btn btn-warning">Edit</a>
                           <a data-delete-url="<?php echo base_url(); ?>payreq/delete/<?php echo $row->idpayreq; ?>" class="btn btn-danger" onclick="deleteConfirm(this)">Hapus</a>

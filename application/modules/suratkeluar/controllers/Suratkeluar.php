@@ -97,6 +97,7 @@ class Suratkeluar extends MY_Controller
 
     if ($this->form_validation->run() == true) {
       $tgl = date('Y-m-d H:i:s');
+      $idnmr_surat = $this->input->post('idnmr_surat');
       // $nourut = $this->db->join('project', 'project.id_project = nmr_surat.id_project')->get('nmr_surat')->row_array();
 
       // if (empty($nourut)) {
@@ -111,10 +112,12 @@ class Suratkeluar extends MY_Controller
       $data['id_projek'] = $this->input->post('id_project');
       $data['id_jenis_surat'] = $this->input->post('jenis_surat');
       $data['createAt'] = $tgl;
-      $this->Suratkeluar_model->save($data);
+      $this->Suratkeluar_model->update($data, $idnmr_surat);
       $this->session->set_flashdata('message', 'Data berhasil ditambahkan');
       redirect('suratkeluar');
     } else {
+      $idnmr_surat = $this->input->post('idnmr_surat');
+      $data['suratkeluar'] = $this->Suratkeluar_model->getById($idnmr_surat);
       $this->render_backend('create');
     }
   }

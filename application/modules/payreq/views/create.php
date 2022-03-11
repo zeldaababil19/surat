@@ -101,7 +101,7 @@
                         </div>
                         <div class="form-group">
                           <label for="pay_date">Payment Due Date</label>
-                          <input type="date" name="pay_date" id="pay_date" class="form-control" placeholder="Enter Payment Due Date" required>
+                          <input type="datetime-local" name="pay_date" id="pay_date" class="form-control" placeholder="Enter Payment Due Date" required>
                         </div>
                         <div class="form-group">
                           <label for="pay_method">Payment Method</label>
