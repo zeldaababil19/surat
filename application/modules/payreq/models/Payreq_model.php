@@ -18,6 +18,7 @@ class Payreq_model extends CI_Model
     $this->db->join('mst_bulan', 'mst_bulan.idmst_bulan = nmr_surat.bulan');
     $this->db->join('mst_pt', 'mst_pt.idmst_pt = project.id_pt');
     $this->db->join('mst_instansi', 'mst_instansi.idmst_instansi = project.id_instansi');
+    $this->db->where('requestor_name', $this->session->userdata('nama'));
     $query = $this->db->get();
     return $query;
   }
@@ -65,8 +66,8 @@ class Payreq_model extends CI_Model
     return $this->db->delete($this->table, array('idpayreq' => $id));
   }
 
-  public function deletedatapr($id)
+  public function deletedatapr($idnmr_surat)
   {
-    return $this->db->delete($this->table, array('iddata_pr' => $id));
+    return $this->db->delete($this->table, array('idnmr_surat' => $idnmr_surat));
   }
 }

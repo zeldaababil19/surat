@@ -56,7 +56,6 @@
                         <td><?php echo $row->keterangan; ?></td>
                         <td>
                           <a href="<?php echo base_url(); ?>project/detail/<?php echo $row->id_project; ?>" class="btn btn-info">Detail</a>
-                          <a href="<?php echo base_url(); ?>project/edit/<?php echo $row->id_project; ?>" class="btn btn-warning">Edit</a>
                           <a data-delete-url="<?php echo base_url(); ?>project/delete/<?php echo $row->id_project; ?>" class="btn btn-danger" onclick="deleteConfirm(this)">Hapus</a>
                         </td>
                       </tr>

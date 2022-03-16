@@ -169,11 +169,12 @@ class Payreq extends MY_Controller
   public function delete($idpayreq)
   {
     $this->Payreq_model->delete($idpayreq);
+    redirect('payreq/deletedatapr');
   }
 
-  public function deletedatapr($iddata_pr)
+  public function deletedatapr($idnmr_surat)
   {
-    $this->Payreq_model->deletedatapr($iddata_pr);
+    $this->Payreq_model->deletedatapr($idnmr_surat);
     $this->session->set_flashdata('message', 'Data berhasil dihapus');
     redirect('payreq');
   }
@@ -552,8 +553,8 @@ class Payreq extends MY_Controller
     $sheet->setCellValue('H40', 'Requested By');
     $sheet->setCellValue('Q40', 'Validated By');
     $sheet->setCellValue('Z40', 'Validated By');
-    $sheet->setCellValue('Q41', 'Mr. Olan');
-    $sheet->setCellValue('Z41', 'Mr. Meylando');
+    $sheet->setCellValue('Q41', 'Meylando');
+    $sheet->setCellValue('Z41', 'Olan');
 
     foreach ($data as $row) { // Lakukan looping pada variabel payreq
 

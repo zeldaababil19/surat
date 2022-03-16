@@ -52,7 +52,6 @@
                         <td><?php echo $row->createAt; ?></td>
                         <td>
                           <a href="<?php echo base_url(); ?>suratkeluar/detail/<?php echo $row->idnmr_surat; ?>" class="btn btn-info">Detail</a>
-                          <a href="<?php echo base_url(); ?>suratkeluar/edit/<?php echo $row->idnmr_surat; ?>" class="btn btn-warning">Edit</a>
                           <a data-delete-url="<?php echo base_url(); ?>suratkeluar/delete/<?php echo $row->idnmr_surat; ?>" class="btn btn-danger" onclick="deleteConfirm(this)">Hapus</a>
                         </td>
                       </tr>

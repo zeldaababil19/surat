@@ -9,9 +9,6 @@ class Project extends MY_Controller
     $this->load->model('Project_model');
     $this->load->model('../../instansi/models/Instansi_model');
     $this->load->model('../../perusahaan/models/Perusahaan_model');
-    if ($this->session->userdata('role') != 'administrator') {
-      show_404();
-    }
   }
 
   public function index()
